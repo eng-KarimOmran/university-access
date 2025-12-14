@@ -3,3 +3,5 @@ export interface INavUser {
   email: string;
   avatar?: string;
 }
+
+export interface IUser {}
