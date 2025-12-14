@@ -6,6 +6,7 @@ import AuthContextProvider from "./context/AuthContextProvider";
 import { ThemeProvider } from "./context/ThemeProvider";
 import { Toaster } from "sonner";
 import DashboardLayout from "./components/Layout/DashboardLayout";
+import NotFound from "./pages/not-found/not-found";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             <Route element={<DashboardLayout />}>
               <Route path="/dashboard" element={<Dashboard />} />
             </Route>
+
+            {/* not found Page */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </AuthContextProvider>
