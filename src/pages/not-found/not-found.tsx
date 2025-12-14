@@ -1,6 +1,5 @@
 import Footer from "@/components/Layout/Footer";
 import { Button } from "@/components/ui/button";
-import React from "react";
 import { Link } from "react-router";
 
 export default function NotFound() {
