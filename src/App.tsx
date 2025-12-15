@@ -1,12 +1,14 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 import AuthLayout from "./components/Layout/AuthLayout";
 import Login from "./pages/auth/Login";
-import Dashboard from "./pages/dashboard/Dashboard";
 import AuthContextProvider from "./context/AuthContextProvider";
 import { ThemeProvider } from "./context/ThemeProvider";
 import { Toaster } from "sonner";
 import DashboardLayout from "./components/Layout/DashboardLayout";
 import NotFound from "./pages/not-found/not-found";
+import DashboardOverview from "./pages/dashboard-overview/dashboard-overview";
+import StudentsManagement from "./pages/students-management/students-management";
+import GateAccessLogs from "./pages/gate-access-logs/gate-access-logs";
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
 
             {/* Protected Pages */}
             <Route element={<DashboardLayout />}>
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard" element={<DashboardOverview />} />
+              <Route path="/students-management" element={<StudentsManagement />}/>
+              <Route path="/gate-access-logs" element={<GateAccessLogs />} />
             </Route>
 
             {/* not found Page */}

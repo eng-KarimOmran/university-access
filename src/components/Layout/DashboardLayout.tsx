@@ -14,10 +14,12 @@ export default function DashboardLayout() {
     return (
       <SidebarProvider defaultOpen={defaultOpen}>
         <AppSidebar />
-        <main className="w-full flex flex-col gap-2 p-2">
-          <NavTop />
-          <div className="w-full rounded-lg p-2">
-            <Outlet />
+        <main className="w-full md:p-3 bg-sidebar">
+          <div className="bg-background p-1 md:rounded-xl min-h-dvh md:min-h-[calc(100dvh-1.5rem)]">
+            <NavTop />
+            <div className="px-2">
+              <Outlet />
+            </div>
           </div>
         </main>
       </SidebarProvider>

@@ -122,3 +122,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+a.active {
+  background-color: var(--sidebar-accent);
+  color: var(--sidebar-accent-foreground);
+}
